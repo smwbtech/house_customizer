@@ -6,6 +6,20 @@
 		align-items: center;
 		justify-content: center;
 		margin: 0 1em;
+
+		&.active {
+			& img {
+				border: 3px solid #eabe47;
+				transform: scale(1.05);
+			}
+		}
+
+		&:hover {
+			& img {
+				border: 3px solid #eabe47;
+			}
+		}
+
 		& img {
 			width: 50px;
 			height: 50px;
@@ -14,6 +28,8 @@
 			overflow: hidden;
 			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 			cursor: pointer;
+			transform: scale(1);
+			transition: transform 0.2s ease-in, border 0.2s ease-in;
 		}
 	}
 </style>
@@ -64,7 +80,11 @@
 	}
 </script>
 
-<li class="house-customizer-controlls__item" on:click="{clickHandler}">
+<li
+	class="house-customizer-controlls__item"
+	class:active="{submenuIndex === index}"
+	on:click="{clickHandler}"
+>
 	<img {src} {alt} />
 	<span>{title}</span>
 	{#if show}
