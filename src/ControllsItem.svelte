@@ -29,10 +29,11 @@
 	export let submenuIndex;
 
 	const dispatch = createEventDispatcher();
-
-	let isSubmenuOpen = false;
 	const src = `img/${name}_preview.jpg`;
 	const alt = `выбор цвета ${name}`;
+
+	let isSubmenuOpen = false;
+	let activeColorIndex = 0;
 
 	$: show = isSubmenuOpen && submenuIndex === index;
 	// Watch for index changes
@@ -53,12 +54,25 @@
 			index: isSubmenuOpen ? index : null
 		});
 	}
+
+	function changeItemHandler(e) {
+		const { colorIndex } = e.detail;
+		activeColorIndex = colorIndex;
+		dispatch('change-item', {
+			...e.detail
+		});
+	}
 </script>
 
 <li class="house-customizer-controlls__item" on:click="{clickHandler}">
 	<img {src} {alt} />
 	<span>{title}</span>
 	{#if show}
-		<ColorMenu {colors} {name} on:change-item />
+		<ColorMenu
+			{colors}
+			{name}
+			{activeColorIndex}
+			on:change-item="{changeItemHandler}"
+		/>
 	{/if}
 </li>
