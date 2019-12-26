@@ -41,6 +41,7 @@
 			{color}
 			{index}
 			{activeColorIndex}
+			colorsLength="{colors.length}"
 			on:set-color="{setColorHandler}"
 		/>
 	{/each}
