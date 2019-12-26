@@ -21,16 +21,16 @@
 
 	export let colors;
 	export let name;
+	export let activeColorIndex;
 
 	const dispatch = createEventDispatcher();
-	let activeColorIndex = 0;
 
 	function setColorHandler(e) {
 		const { color, colorIndex } = e.detail;
-		activeColorIndex = colorIndex;
 		dispatch('change-item', {
 			name,
-			color
+			color,
+			colorIndex
 		});
 	}
 </script>
