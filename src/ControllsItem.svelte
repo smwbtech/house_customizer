@@ -35,6 +35,10 @@
 	const alt = `выбор цвета ${name}`;
 
 	$: show = isSubmenuOpen && submenuIndex === index;
+	// Watch for index changes
+	$: if (submenuIndex !== index) {
+		isSubmenuOpen = false;
+	}
 
 	/**
         Toggle submenu status and dispatch
