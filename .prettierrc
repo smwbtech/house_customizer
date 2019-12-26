@@ -1,0 +1,12 @@
+{
+	"semi": true,
+	"arrowParens": "always",
+	"singleQuote": true,
+	"useTabs": true,
+	"tabWidth": 4,
+	"endOfLine": "auto",
+	"svelteSortOrder": "styles-scripts-markup",
+	"svelteStrictMode": true,
+	"svelteBracketNewLine": true,
+	"svelteAllowShorthand": false
+}
