@@ -21,13 +21,18 @@
 </style>
 
 <script>
+	import { onMount } from 'svelte';
 	import { createEventDispatcher } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	export let color;
 	export let index;
 	export let activeColorIndex;
+	export let colorsLength;
 
 	const dispatch = createEventDispatcher();
+
+	let init = false;
 
 	$: style = `background-color: ${color.hex};`;
 	function clickHandler(e) {
@@ -36,11 +41,16 @@
 			colorIndex: index
 		});
 	}
+
+	onMount(() => setTimeout(() => (init = true), 20 * (colorsLength - index)));
 </script>
 
-<li
-	class="house-customizer-colors__item"
-	class:active="{index === activeColorIndex}"
-	on:click="{clickHandler}"
-	{style}
-></li>
+{#if init}
+	<li
+		transition:fly="{{ delay: (colorsLength - index) * 10, duration: 200, y: 20 }}"
+		class="house-customizer-colors__item"
+		class:active="{index === activeColorIndex}"
+		on:click="{clickHandler}"
+		{style}
+	></li>
+{/if}
