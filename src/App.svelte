@@ -15,6 +15,9 @@
 </style>
 
 <script>
+	import { onMount } from 'svelte';
+	import { controlls } from './lib/controlls_collection.js';
+	import { loadImagesOnItersection } from './lib/images_loading.js';
 	import Controlls from './Controlls.svelte';
 
 	let customization = {
@@ -29,6 +32,9 @@
 		},
 		plumbs: {
 			color: 'default'
+		},
+		drains: {
+			color: 'default'
 		}
 	};
 
@@ -36,14 +42,22 @@
 	$: roof = `img/roof/roof_${customization.roof.color}.png`;
 	$: windows = `img/windows/windows_${customization.windows.color}.png`;
 	$: plumbs = `img/plumbs/plumbs_${customization.plumbs.color}.png`;
+	$: drains = `img/drains/drains_${customization.drains.color}.png`;
 
 	function changeItemHandler(e) {
 		const { name, color } = e.detail;
 		customization[name].color = color;
 	}
+
+	onMount(() => loadImagesOnItersection('#house_customizer', controlls));
 </script>
 
 <div class="house-customizer-wrapper">
+
+	<!-- Drains customization -->
+	{#if customization.drains.color !== 'default'}
+		<img class="customization" src="{drains}" alt="выбор цвета сливов" />
+	{/if}
 
 	<!-- Plumbs customization -->
 	{#if customization.plumbs.color !== 'default'}
