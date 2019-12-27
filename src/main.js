@@ -1,10 +1,7 @@
 import App from './App.svelte';
 
 const app = new App({
-	target: document.getElementById('house_customizer'),
-	props: {
-		name: 'world'
-	}
+	target: document.getElementById('house_customizer')
 });
 
 export default app;
