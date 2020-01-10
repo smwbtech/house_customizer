@@ -5,9 +5,12 @@
 		width: 50px;
 		height: 50px;
 		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-		margin: 0.5em 0;
+		margin: 0.5em;
 		cursor: pointer;
 		transition: border 0.3s ease-in, box-shadow 0.3s ease-out;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		&.active {
 			border: 3px solid #ffd86f;
@@ -16,6 +19,10 @@
 		&:hover {
 			border: 3px solid #ffd86f;
 			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+		}
+
+		& span {
+			font-size: 0.7em;
 		}
 	}
 </style>
@@ -52,5 +59,7 @@
 		class:active="{index === activeColorIndex}"
 		on:click="{clickHandler}"
 		{style}
-	></li>
+	>
+		<span>{color.name.toUpperCase()}</span>
+	</li>
 {/if}

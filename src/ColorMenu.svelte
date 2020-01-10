@@ -3,11 +3,12 @@
 		position: absolute;
 		top: 0;
 		left: 50%;
-		width: 50px;
+		max-height: 50vh;
+		min-width: 100%;
 		margin: 0;
 		padding: 0;
 		display: flex;
-		flex-flow: column;
+		flex-flow: column wrap;
 		justify-content: space-between;
 		align-items: center;
 		list-style: none;
