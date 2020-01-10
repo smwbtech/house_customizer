@@ -15,20 +15,56 @@ export const controlls = [
 				hex: '#d8b979'
 			},
 			{
-				name: 'green',
-				hex: '#b5cf68'
+				name: 't3012',
+				hex: '#957d5c'
 			},
 			{
-				name: 'red',
-				hex: '#c16842'
+				name: 't3019',
+				hex: '#785849'
 			},
 			{
-				name: 'brown',
-				hex: '#756554'
+				name: 't3027',
+				hex: '#5d6c46'
 			},
 			{
-				name: 'orange',
-				hex: '#f1c76e'
+				name: 't3037',
+				hex: '#999987'
+			},
+			{
+				name: 't3041',
+				hex: '#bbab81'
+			},
+			{
+				name: 't3031',
+				hex: '#9da38f'
+			},
+			{
+				name: '2688',
+				hex: '#8e9181'
+			},
+			{
+				name: '2684',
+				hex: '#789d90'
+			},
+			{
+				name: '2680',
+				hex: '#85a075'
+			},
+			{
+				name: '2669',
+				hex: '#aa786d'
+			},
+			{
+				name: '2672',
+				hex: '#d39f67'
+			},
+			{
+				name: '2665',
+				hex: '#655539'
+			},
+			{
+				name: '2661',
+				hex: '#dccdae'
 			}
 		]
 	},
@@ -41,16 +77,28 @@ export const controlls = [
 				hex: '#999da8'
 			},
 			{
-				name: 'green',
-				hex: '#b5cf68'
+				name: 'ral5005',
+				hex: '#297dad'
 			},
 			{
-				name: 'red',
-				hex: '#c16842'
+				name: 'ral8017',
+				hex: '#593f45'
 			},
 			{
-				name: 'blue',
-				hex: '#5d929f'
+				name: 'ral3005',
+				hex: '#904f56'
+			},
+			{
+				name: 'ral7024',
+				hex: '#73868b'
+			},
+			{
+				name: 'rr11',
+				hex: '#6f9b84'
+			},
+			{
+				name: 'rr32',
+				hex: '#676c6d'
 			}
 		]
 	},
