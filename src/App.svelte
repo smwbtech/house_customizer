@@ -2,8 +2,9 @@
 	.house-customizer-wrapper {
 		max-width: 1200px;
 		position: relative;
-		& img {
+		& canvas {
 			max-width: 100%;
+			height: auto;
 
 			&.customization {
 				position: absolute;
@@ -17,8 +18,11 @@
 <script>
 	import { onMount } from 'svelte';
 	import { controlls } from './lib/controlls_collection.js';
+	import { drawImage } from './lib/draw_image.js';
 	import { loadImagesOnItersection } from './lib/images_loading.js';
 	import Controlls from './Controlls.svelte';
+
+	let canvas;
 
 	let customization = {
 		walls: {
@@ -40,26 +44,21 @@
 
 	function changeItemHandler(e) {
 		const { name, color } = e.detail;
+		const imageSrc = `img/${name}/${name}_${color}.png`;
 		customization[name].color = color;
+		drawImage({ canvas, imageSrc });
 	}
 
-	onMount(() => loadImagesOnItersection('#house_customizer', controlls));
+	onMount(() => {
+		canvas = document.getElementById('house_customizer_canvas');
+		drawImage({ canvas, imageSrc: '/img/house.jpg', setSize: true });
+		loadImagesOnItersection('#house_customizer', controlls);
+	});
 </script>
 
 <div class="house-customizer-wrapper">
 
-	<!-- Customization layers -->
-	{#each Object.keys(customization) as key}
-		{#if customization[key].color !== 'default'}
-			<img
-				class="customization"
-				src="{`img/${key}/${key}_${customization[key].color}.png`}"
-				alt="кастомизация элемента дома"
-			/>
-		{/if}
-	{/each}
-
-	<!-- House background image -->
-	<img src="img/house.jpg" alt="Изображение стандартного дома" />
+	<!-- House image -->
+	<canvas id="house_customizer_canvas"></canvas>
 	<Controlls on:change-item="{changeItemHandler}" />
 </div>
