@@ -23,6 +23,7 @@
 
 		& span {
 			font-size: 0.7em;
+			color: #fff;
 		}
 	}
 </style>
@@ -54,7 +55,7 @@
 
 {#if init}
 	<li
-		transition:fly="{{ delay: (colorsLength - index) * 10, duration: 200, y: 20 }}"
+		transition:fly="{{ delay: index * 15, duration: 200, y: 20 }}"
 		class="house-customizer-colors__item"
 		class:active="{index === activeColorIndex}"
 		on:click="{clickHandler}"
