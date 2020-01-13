@@ -8,8 +8,8 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		flex-flow: column wrap;
-		justify-content: space-between;
+		flex-flow: column-reverse wrap-reverse;
+		justify-content: center;
 		align-items: center;
 		list-style: none;
 		transform: translateY(calc((100% + 20px) * -1)) translateX(-50%);
