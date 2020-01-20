@@ -1,16 +1,27 @@
 <style>
 	.house-customizer-controlls {
-		position: absolute;
-		bottom: 0;
-		left: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		padding: 0.5em;
 		margin: 0;
-		background-color: rgba(255, 255, 255, 0.8);
+		background-color: #fff;
 		list-style: none;
+	}
+
+	@media (width < 991px) {
+		.house-customizer-controlls {
+			max-width: 100%;
+			padding: 0.5em 0;
+		}
+	}
+
+	@media (width < 768px) {
+		.house-customizer-controlls {
+			justify-content: flex-start;
+			overflow-x: scroll;
+		}
 	}
 </style>
 
