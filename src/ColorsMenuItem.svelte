@@ -26,6 +26,16 @@
 			color: #fff;
 		}
 	}
+
+	@media (width < 768px) {
+		.house-customizer-colors__item {
+			position: static;
+			margin: 0px;
+			margin-right: 1em;
+			min-width: 50px;
+			min-height: 50px;
+		}
+	}
 </style>
 
 <script>
