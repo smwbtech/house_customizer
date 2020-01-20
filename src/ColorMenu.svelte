@@ -14,6 +14,24 @@
 		list-style: none;
 		transform: translateY(calc((100% + 20px) * -1)) translateX(-50%);
 	}
+
+	@media (768px <= width < 991px) {
+		.house-customizer-colors {
+			max-height: 400px;
+		}
+	}
+
+	@media (width < 768px) {
+		.house-customizer-colors {
+			left: 0;
+			top: calc(100% - 160px);
+			transform: translateY(0) translateX(0);
+			flex-flow: row;
+			justify-content: flex-start;
+			max-width: 100%;
+			overflow-x: scroll;
+		}
+	}
 </style>
 
 <script>
