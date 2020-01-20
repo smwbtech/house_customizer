@@ -32,6 +32,16 @@
 			transition: transform 0.2s ease-in, border 0.2s ease-in;
 		}
 	}
+
+	@media (width < 768px) {
+		.house-customizer-controlls__item {
+			position: static;
+			margin: 0px;
+			margin-right: 2em;
+			min-width: 50px;
+			min-height: 50px;
+		}
+	}
 </style>
 
 <script>
