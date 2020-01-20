@@ -2,15 +2,26 @@
 	.house-customizer-wrapper {
 		max-width: 1200px;
 		position: relative;
+		border-radius: 10px;
+		overflow: hidden;
 		& canvas {
 			max-width: 100%;
 			height: auto;
+		}
+	}
 
-			&.customization {
-				position: absolute;
-				left: 0;
-				top: 0;
-			}
+	/* Tablets */
+	@media (width < 991px) {
+		.house-customizer-wrapper {
+			max-width: 95vw;
+			width: 100%;
+		}
+	}
+
+	/* Phones */
+	@media (width < 768px) {
+		.house-customizer-wrapper {
+			position: relative;
 		}
 	}
 </style>
