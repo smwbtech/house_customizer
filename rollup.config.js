@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import autoPreprocess from 'svelte-preprocess';
 import { terser } from 'rollup-plugin-terser';
+import babel from 'rollup-plugin-babel';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -26,7 +27,20 @@ export default {
 				css.write('public/build/bundle.css');
 			}
 		}),
-
+		babel({
+			babelrc: false,
+			presets: [
+				[
+					'@babel/preset-env',
+					{
+						targets: {
+							browsers: ['last 2 version', '> 2%', 'IE 11']
+						},
+						modules: false
+					}
+				]
+			]
+		}),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration —
