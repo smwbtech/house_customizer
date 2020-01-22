@@ -122,7 +122,7 @@ export const controlls = [
 	},
 	{
 		name: 'plumbs',
-		title: 'отвесы',
+		title: 'доборы',
 		colors: [
 			{
 				name: 'default',
