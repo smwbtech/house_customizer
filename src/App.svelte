@@ -4,6 +4,7 @@
 		position: relative;
 		border-radius: 10px;
 		overflow: hidden;
+		box-shadow: 0 15px 15px rgba(0, 0, 0, 0.04);
 		& canvas {
 			max-width: 100%;
 			height: auto;
