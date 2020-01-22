@@ -22,7 +22,7 @@
 		}
 
 		& span {
-			font-size: 0.7em;
+			font-size: 0.6em;
 			color: #fff;
 		}
 	}
@@ -53,6 +53,11 @@
 	let init = false;
 
 	$: style = `background-color: ${color.hex};`;
+	$: textColor = `color: ${color.color ? color.color : '#fff'};`;
+	$: text = color.title
+		? color.title.toUpperCase()
+		: color.name.toUpperCase();
+
 	function clickHandler(e) {
 		dispatch('set-color', {
 			color: color.name,
@@ -71,6 +76,6 @@
 		on:click="{clickHandler}"
 		{style}
 	>
-		<span>{color.name.toUpperCase()}</span>
+		<span style="{textColor}">{text}</span>
 	</li>
 {/if}
