@@ -30,6 +30,7 @@
 			justify-content: flex-start;
 			max-width: 100%;
 			overflow-x: scroll;
+			padding-left: 1em;
 		}
 	}
 </style>
