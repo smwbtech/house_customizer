@@ -21,6 +21,7 @@
 		.house-customizer-controlls {
 			justify-content: flex-start;
 			overflow-x: scroll;
+			padding-left: 1em;
 		}
 	}
 </style>
