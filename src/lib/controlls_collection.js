@@ -108,15 +108,14 @@ export const controlls = [
 		colors: [
 			{
 				name: 'default',
+				title: 'пластик',
+				color: '#000',
 				hex: '#fff'
 			},
 			{
-				name: 'orange',
-				hex: '#f1c76e'
-			},
-			{
-				name: 'purple',
-				hex: '#6f3c3e'
+				name: 'brown',
+				title: 'дерево',
+				hex: '#41342c'
 			}
 		]
 	},
@@ -126,15 +125,13 @@ export const controlls = [
 		colors: [
 			{
 				name: 'default',
+				title: 'white',
+				color: '#000',
 				hex: '#fff'
 			},
 			{
-				name: 'orange',
-				hex: '#f1c76e'
-			},
-			{
-				name: 'purple',
-				hex: '#6f3c3e'
+				name: 'brown',
+				hex: '#41342c'
 			}
 		]
 	},
@@ -145,23 +142,23 @@ export const controlls = [
 			{
 				name: 'default',
 				hex: '#756554'
-			},
-			{
-				name: 'green',
-				hex: '#b5cf68'
-			},
-			{
-				name: 'blue',
-				hex: '#5d929f'
-			},
-			{
-				name: 'orange',
-				hex: '#f1c76e'
-			},
-			{
-				name: 'purple',
-				hex: '#6f3c3e'
 			}
+			// {
+			// 	name: 'green',
+			// 	hex: '#b5cf68'
+			// },
+			// {
+			// 	name: 'blue',
+			// 	hex: '#5d929f'
+			// },
+			// {
+			// 	name: 'orange',
+			// 	hex: '#f1c76e'
+			// },
+			// {
+			// 	name: 'purple',
+			// 	hex: '#6f3c3e'
+			// }
 		]
 	}
 ];
