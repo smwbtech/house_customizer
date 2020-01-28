@@ -142,23 +142,44 @@ export const controlls = [
 			{
 				name: 'default',
 				hex: '#756554'
+			},
+			{
+				name: 'choco',
+				hex: '#1c0a0b'
+			},
+			{
+				name: 'brown',
+				hex: '#261810'
+			},
+			{
+				name: 'red',
+				hex: '#92423e'
+			},
+			{
+				name: 'tile',
+				hex: '#9e5f3b'
+			},
+			{
+				name: 'black',
+				hex: '#0c0c0c'
+			},
+			{
+				name: 'grey',
+				hex: '#656565'
+			},
+			{
+				name: 'dgray',
+				hex: '#4f4f4f'
+			},
+			{
+				name: 'metallic',
+				hex: '#8e8e8e'
+			},
+			{
+				name: 'white',
+				hex: '#fff',
+				color: '#000'
 			}
-			// {
-			// 	name: 'green',
-			// 	hex: '#b5cf68'
-			// },
-			// {
-			// 	name: 'blue',
-			// 	hex: '#5d929f'
-			// },
-			// {
-			// 	name: 'orange',
-			// 	hex: '#f1c76e'
-			// },
-			// {
-			// 	name: 'purple',
-			// 	hex: '#6f3c3e'
-			// }
 		]
 	}
 ];
