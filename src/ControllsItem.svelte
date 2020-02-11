@@ -31,6 +31,17 @@
 			transform: scale(1);
 			transition: transform 0.2s ease-in, border 0.2s ease-in;
 		}
+
+		& .color-marker {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			border: 1px solid #ffd86f;
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+		}
 	}
 
 	@media (width < 768px) {
@@ -67,6 +78,8 @@
 		isSubmenuOpen = false;
 	}
 
+	$: markerStyle = `background-color: ${colors[activeColorIndex].hex};`;
+
 	/**
         Toggle submenu status and dispatch
         'change-submenu' event with index of
@@ -83,6 +96,7 @@
 
 	function changeItemHandler(e) {
 		const { colorIndex } = e.detail;
+		console.log(e.detail);
 		activeColorIndex = colorIndex;
 		dispatch('change-item', {
 			...e.detail
@@ -97,6 +111,7 @@
 >
 	<img {src} {alt} />
 	<span>{title}</span>
+	<span class="color-marker" style="{markerStyle}"></span>
 	{#if show}
 		<ColorMenu
 			{colors}
