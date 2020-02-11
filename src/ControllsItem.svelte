@@ -89,6 +89,8 @@
 	let activeColorIndex = 0;
 
 	$: show = isSubmenuOpen && submenuIndex === index;
+
+	$: capitalizedTitle = `${title.slice(0, 1).toUpperCase()}${title.slice(1)}`;
 	// Watch for index changes
 	$: if (submenuIndex !== index) {
 		isSubmenuOpen = false;
@@ -127,7 +129,7 @@
 >
 	<img {src} {alt} />
 	<span class="description">
-		{title}
+		{capitalizedTitle}
 		<span class="color-marker" style="{markerStyle}"></span>
 	</span>
 
