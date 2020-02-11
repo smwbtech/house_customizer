@@ -5,7 +5,7 @@
 		flex-flow: column;
 		align-items: center;
 		justify-content: center;
-		margin: 0 1em;
+		margin: 0 1.5em;
 
 		&.active {
 			& img {
@@ -21,8 +21,8 @@
 		}
 
 		& img {
-			width: 60px;
-			height: 60px;
+			width: 70px;
+			height: 70px;
 			border: 3px solid #ffd86f;
 			border-radius: 50%;
 			overflow: hidden;
@@ -33,8 +33,8 @@
 		}
 
 		& .color-marker {
-			width: 25px;
-			height: 25px;
+			width: 35px;
+			height: 35px;
 			border-radius: 50%;
 			border: 1px solid #ffd86f;
 			position: absolute;
