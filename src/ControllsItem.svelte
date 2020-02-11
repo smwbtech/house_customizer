@@ -21,8 +21,8 @@
 		}
 
 		& img {
-			width: 50px;
-			height: 50px;
+			width: 60px;
+			height: 60px;
 			border: 3px solid #ffd86f;
 			border-radius: 50%;
 			overflow: hidden;
@@ -30,6 +30,17 @@
 			cursor: pointer;
 			transform: scale(1);
 			transition: transform 0.2s ease-in, border 0.2s ease-in;
+		}
+
+		& .color-marker {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			border: 1px solid #ffd86f;
+			position: absolute;
+			left: -5px;
+			top: -5px;
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 		}
 	}
 
@@ -40,6 +51,22 @@
 			margin-right: 2em;
 			min-width: 50px;
 			min-height: 50px;
+
+			& img {
+				width: 50px;
+				height: 50px;
+			}
+
+			& .description {
+				position: relative;
+				min-width: 60px;
+				text-align: center;
+
+				& .color-marker {
+					top: -60px;
+					left: -5px;
+				}
+			}
 		}
 	}
 </style>
@@ -62,10 +89,14 @@
 	let activeColorIndex = 0;
 
 	$: show = isSubmenuOpen && submenuIndex === index;
+
+	$: capitalizedTitle = `${title.slice(0, 1).toUpperCase()}${title.slice(1)}`;
 	// Watch for index changes
 	$: if (submenuIndex !== index) {
 		isSubmenuOpen = false;
 	}
+
+	$: markerStyle = `background-color: ${colors[activeColorIndex].hex};`;
 
 	/**
         Toggle submenu status and dispatch
@@ -83,6 +114,7 @@
 
 	function changeItemHandler(e) {
 		const { colorIndex } = e.detail;
+		console.log(e.detail);
 		activeColorIndex = colorIndex;
 		dispatch('change-item', {
 			...e.detail
@@ -96,7 +128,11 @@
 	on:click="{clickHandler}"
 >
 	<img {src} {alt} />
-	<span>{title}</span>
+	<span class="description">
+		{capitalizedTitle}
+		<span class="color-marker" style="{markerStyle}"></span>
+	</span>
+
 	{#if show}
 		<ColorMenu
 			{colors}

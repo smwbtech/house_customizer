@@ -19,6 +19,8 @@
 
 	@media (width < 768px) {
 		.house-customizer-controlls {
+			max-width: none;
+			width: auto;
 			justify-content: flex-start;
 			overflow-x: scroll;
 			padding-left: 1em;
