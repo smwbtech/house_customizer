@@ -21,8 +21,8 @@
 		}
 
 		& img {
-			width: 50px;
-			height: 50px;
+			width: 60px;
+			height: 60px;
 			border: 3px solid #ffd86f;
 			border-radius: 50%;
 			overflow: hidden;
@@ -33,8 +33,8 @@
 		}
 
 		& .color-marker {
-			width: 20px;
-			height: 20px;
+			width: 25px;
+			height: 25px;
 			border-radius: 50%;
 			border: 1px solid #ffd86f;
 			position: absolute;
@@ -51,6 +51,22 @@
 			margin-right: 2em;
 			min-width: 50px;
 			min-height: 50px;
+
+			& img {
+				width: 50px;
+				height: 50px;
+			}
+
+			& .description {
+				position: relative;
+				min-width: 60px;
+				text-align: center;
+
+				& .color-marker {
+					top: -60px;
+					left: -5px;
+				}
+			}
 		}
 	}
 </style>
@@ -110,8 +126,11 @@
 	on:click="{clickHandler}"
 >
 	<img {src} {alt} />
-	<span>{title}</span>
-	<span class="color-marker" style="{markerStyle}"></span>
+	<span class="description">
+		{title}
+		<span class="color-marker" style="{markerStyle}"></span>
+	</span>
+
 	{#if show}
 		<ColorMenu
 			{colors}
