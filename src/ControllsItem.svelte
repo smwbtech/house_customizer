@@ -114,7 +114,6 @@
 
 	function changeItemHandler(e) {
 		const { colorIndex } = e.detail;
-		console.log(e.detail);
 		activeColorIndex = colorIndex;
 		dispatch('change-item', {
 			...e.detail

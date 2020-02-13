@@ -19,7 +19,6 @@ export function drawImage({
 	const img = new Image();
 	img.src = imageSrc;
 	img.addEventListener('load', () => {
-		console.log(`Img width: ${img.width}, img height: ${img.height}`);
 		if (setSize) {
 			ctx.canvas.width = img.width;
 			ctx.canvas.height = img.height;
