@@ -11,7 +11,7 @@ export const controlls = [
 		title: 'стены',
 		colors: [
 			{
-				name: 'default',
+				name: 'ral1001',
 				hex: '#d8b979'
 			},
 			{
@@ -73,7 +73,7 @@ export const controlls = [
 		title: 'крыша',
 		colors: [
 			{
-				name: 'default',
+				name: 'ral7024',
 				hex: '#999da8'
 			},
 			{
@@ -88,10 +88,10 @@ export const controlls = [
 				name: 'ral3005',
 				hex: '#904f56'
 			},
-			{
-				name: 'ral7024',
-				hex: '#73868b'
-			},
+			// {
+			// 	name: 'ral7024',
+			// 	hex: '#73868b'
+			// },
 			{
 				name: 'rr11',
 				hex: '#6f9b84'
