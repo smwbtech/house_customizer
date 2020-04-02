@@ -15,6 +15,11 @@ export const controlls = [
 				hex: '#d8b979'
 			},
 			{
+				name: 'white',
+				hex: '#fff',
+				color: '#000'
+			},
+			{
 				name: 't3012',
 				hex: '#957d5c'
 			},
@@ -93,12 +98,32 @@ export const controlls = [
 			// 	hex: '#73868b'
 			// },
 			{
-				name: 'rr11',
-				hex: '#6f9b84'
+				name: 'ral6005',
+				hex: '#5d8470'
 			},
 			{
-				name: 'rr32',
-				hex: '#676c6d'
+				name: 'ral5002',
+				hex: '#7f90c2'
+			},
+			{
+				name: 'ral3011',
+				hex: '#b57a7f'
+			},
+			{
+				name: 'ral3009',
+				hex: '#ba9a9b'
+			},
+			{
+				name: 'ral3003',
+				hex: '#9f3c42'
+			},
+			{
+				name: 'ral2004',
+				hex: '#a84125'
+			},
+			{
+				name: 'ral1014',
+				hex: '#d6c19b'
 			}
 		]
 	},
@@ -108,13 +133,13 @@ export const controlls = [
 		colors: [
 			{
 				name: 'default',
-				title: 'пластик',
+				title: 'white',
 				color: '#000',
 				hex: '#fff'
 			},
 			{
 				name: 'brown',
-				title: 'дерево',
+				title: 'brown',
 				hex: '#41342c'
 			}
 		]
